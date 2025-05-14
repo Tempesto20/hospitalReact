@@ -86,7 +86,7 @@ const SpecialtyForm: React.FC<SpecialtyFormProps> = ({
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
+        <Button onClick={onClose}>Назад</Button>
         <Button onClick={handleSubmit} color="primary" variant="contained">
           {specialty ? 'Update' : 'Create'}
         </Button>

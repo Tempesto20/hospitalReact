@@ -16,7 +16,6 @@ const DepartmentItem: React.FC<DepartmentItemProps> = ({
 }) => {
   return (
     <TableRow>
-      <TableCell>{department.department_id}</TableCell>
       <TableCell>{department.department_name}</TableCell>
       <TableCell>
         <IconButton onClick={() => onEdit(department)}>

@@ -86,7 +86,7 @@ const DepartmentForm: React.FC<DepartmentFormProps> = ({
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
+        <Button onClick={onClose}>Назад</Button>
         <Button onClick={handleSubmit} color="primary" variant="contained">
           {department ? 'Update' : 'Create'}
         </Button>

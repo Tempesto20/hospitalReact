@@ -19,8 +19,13 @@ const AppointmentItem: React.FC<AppointmentItemProps> = ({
       <TableCell>{appointment.appointment_id}</TableCell>
       <TableCell>{appointment.patient_id}</TableCell>
       <TableCell>{appointment.doctor_id}</TableCell>
+      <TableCell>{appointment.ward_id}</TableCell>
       <TableCell>{new Date(appointment.appointment_date).toLocaleDateString()}</TableCell>
+      <TableCell>{appointment.symptom}</TableCell>
       <TableCell>{appointment.diagnos}</TableCell>
+      <TableCell>{appointment.allergy}</TableCell>
+      <TableCell>{appointment.preparation}</TableCell>
+
       <TableCell>
         <IconButton onClick={() => onEdit(appointment)}>
           <Edit />

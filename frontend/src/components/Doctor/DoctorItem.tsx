@@ -16,10 +16,10 @@ const DoctorItem: React.FC<DoctorItemProps> = ({
 }) => {
   return (
     <TableRow>
-      <TableCell>{doctor.doctor_id}</TableCell>
       <TableCell>{doctor.full_name}</TableCell>
       <TableCell>{doctor.specialty_id}</TableCell>
-      <TableCell>
+            {/* <TableCell>{specialty.specialty_name}</TableCell> */}
+      <TableCell>   
         <IconButton onClick={() => onEdit(doctor)}>
           <Edit />
         </IconButton>

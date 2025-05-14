@@ -12,7 +12,6 @@ interface SpecialtyItemProps {
 const SpecialtyItem: React.FC<SpecialtyItemProps> = ({ specialty, onEdit, onDelete }) => {
   return (
     <TableRow>
-      <TableCell>{specialty.specialty_id}</TableCell>
       <TableCell>{specialty.specialty_name}</TableCell>
       <TableCell>
         <IconButton onClick={() => onEdit(specialty)}>

@@ -7,16 +7,16 @@ const Navbar: React.FC = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Medical System
+          Медицинскеая система
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
-          <Button color="inherit" component={Link} to="/">Home</Button>
-          <Button color="inherit" component={Link} to="/specialties">Specialties</Button>
-          <Button color="inherit" component={Link} to="/doctors">Doctors</Button>
-          <Button color="inherit" component={Link} to="/patients">Patients</Button>
-          <Button color="inherit" component={Link} to="/departments">Departments</Button>
-          <Button color="inherit" component={Link} to="/wards">Wards</Button>
-          <Button color="inherit" component={Link} to="/appointments">Appointments</Button>
+          <Button color="inherit" component={Link} to="/">Главная</Button>
+          <Button color="inherit" component={Link} to="/specialties">Специальности</Button>
+          <Button color="inherit" component={Link} to="/doctors">Врачи</Button>
+          <Button color="inherit" component={Link} to="/patients">Пациенты</Button>
+          <Button color="inherit" component={Link} to="/departments">Отделения</Button>
+          <Button color="inherit" component={Link} to="/wards">Палаты</Button>
+          <Button color="inherit" component={Link} to="/appointments">Приемы</Button>
         </Box>
       </Toolbar>
     </AppBar>

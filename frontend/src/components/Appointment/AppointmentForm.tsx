@@ -218,7 +218,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
+        <Button onClick={onClose}>Назад</Button>
         <Button onClick={handleSubmit} color="primary" variant="contained">
           {appointment ? 'Update' : 'Create'}
         </Button>

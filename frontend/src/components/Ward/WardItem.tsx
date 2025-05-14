@@ -16,7 +16,6 @@ const WardItem: React.FC<WardItemProps> = ({
 }) => {
   return (
     <TableRow>
-      <TableCell>{ward.ward_id}</TableCell>
       <TableCell>{ward.ward_number}</TableCell>
       <TableCell>{ward.department_id}</TableCell>
       <TableCell>{ward.doctor_id || 'None'}</TableCell>

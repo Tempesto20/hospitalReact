@@ -16,10 +16,12 @@ const PatientItem: React.FC<PatientItemProps> = ({
 }) => {
   return (
     <TableRow>
-      <TableCell>{patient.patient_id}</TableCell>
       <TableCell>{patient.full_name}</TableCell>
       <TableCell>{new Date(patient.birth_date).toLocaleDateString()}</TableCell>
       <TableCell>{patient.insurance_policy}</TableCell>
+      <TableCell>{patient.passport}</TableCell>
+      <TableCell>{new Date(patient.admission_date).toLocaleDateString()}</TableCell>
+      <TableCell>{new Date(patient.discharge_date).toLocaleDateString()}</TableCell>
       <TableCell>
         <IconButton onClick={() => onEdit(patient)}>
           <Edit />

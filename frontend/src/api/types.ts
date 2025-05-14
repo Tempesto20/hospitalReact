@@ -16,7 +16,7 @@ export interface PatientData {
   insurance_policy: string;
   passport: string;
   admission_date: string;
-  discharge_date?: string;
+  discharge_date?: string | number | Date | undefined | any;
 }
 
 export interface DepartmentData {

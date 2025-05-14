@@ -173,7 +173,7 @@ const PatientForm: React.FC<PatientFormProps> = ({
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
+        <Button onClick={onClose}>Назад</Button>
         <Button onClick={handleSubmit} color="primary" variant="contained">
           {patient ? 'Update' : 'Create'}
         </Button>

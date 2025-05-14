@@ -6,13 +6,13 @@ const NotFoundPage: React.FC = () => {
   return (
     <Box sx={{ p: 3, textAlign: 'center' }}>
       <Typography variant="h4" gutterBottom>
-        404 - Page Not Found
+        404 - Страница не найдена
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        The page you are looking for does not exist.
+        Страница, которую вы ищете, не существует.
       </Typography>
       <Button variant="contained" component={Link} to="/">
-        Go to Home
+        Вернуться на главную страницу
       </Button>
     </Box>
   );

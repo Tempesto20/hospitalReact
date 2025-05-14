@@ -81,20 +81,20 @@ const SpecialtyList: React.FC = () => {
     }
   };
 
-  if (loading) return <Typography>Loading...</Typography>;
+  if (loading) return <Typography>Загрузка...</Typography>;
   if (error) return <Typography color="error">{error}</Typography>;
 
   return (
     <Box sx={{ padding: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
-        <Typography variant="h4">Specialties</Typography>
+        <Typography variant="h4">Специальности</Typography>
         <Button 
           variant="contained" 
           color="primary" 
           startIcon={<Add />}
           onClick={handleAddClick}
         >
-          Add Specialty
+          Добавить Специальности
         </Button>
       </Box>
 
@@ -102,9 +102,9 @@ const SpecialtyList: React.FC = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell>Actions</TableCell>
+              
+              <TableCell>Название специальности</TableCell>
+              <TableCell>Действия</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -131,13 +131,13 @@ const SpecialtyList: React.FC = () => {
         open={openDeleteDialog}
         onClose={() => setOpenDeleteDialog(false)}
       >
-        <DialogTitle>Confirm Delete</DialogTitle>
+        <DialogTitle>Подтвердите удаление</DialogTitle>
         <DialogContent>
-          Are you sure you want to delete this specialty?
+          Вы уверены, что хотите удалить специальность?
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setOpenDeleteDialog(false)}>Cancel</Button>
-          <Button onClick={handleDeleteConfirm} color="error">Delete</Button>
+          <Button onClick={() => setOpenDeleteDialog(false)}>Назад</Button>
+          <Button onClick={handleDeleteConfirm} color="error">Удалить</Button>
         </DialogActions>
       </Dialog>
     </Box>

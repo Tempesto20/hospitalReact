@@ -112,7 +112,7 @@ const DoctorForm: React.FC<DoctorFormProps> = ({
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
+        <Button onClick={onClose}>Назад</Button>
         <Button onClick={handleSubmit} color="primary" variant="contained">
           {doctor ? 'Update' : 'Create'}
         </Button>

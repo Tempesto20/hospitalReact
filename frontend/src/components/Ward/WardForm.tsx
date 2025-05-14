@@ -137,7 +137,7 @@ const WardForm: React.FC<WardFormProps> = ({
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
+        <Button onClick={onClose}>Назад</Button>
         <Button onClick={handleSubmit} color="primary" variant="contained">
           {ward ? 'Update' : 'Create'}
         </Button>

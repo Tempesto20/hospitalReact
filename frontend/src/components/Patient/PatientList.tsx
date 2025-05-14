@@ -89,20 +89,20 @@ const PatientList: React.FC = () => {
     }
   };
 
-  if (loading) return <Typography>Loading...</Typography>;
+  if (loading) return <Typography>Загрузка...</Typography>;
   if (error) return <Typography color="error">{error}</Typography>;
 
   return (
     <Box sx={{ padding: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
-        <Typography variant="h4">Patients</Typography>
+        <Typography variant="h4">Пациенты</Typography>
         <Button 
           variant="contained" 
           color="primary" 
           startIcon={<Add />}
           onClick={handleAddClick}
         >
-          Add Patient
+          Добавить Пациента
         </Button>
       </Box>
 
@@ -110,11 +110,14 @@ const PatientList: React.FC = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Full Name</TableCell>
-              <TableCell>Birth Date</TableCell>
-              <TableCell>Insurance</TableCell>
-              <TableCell>Actions</TableCell>
+              
+              <TableCell>ФИО</TableCell>
+              <TableCell>Дата рождения</TableCell>
+              <TableCell>Полис</TableCell>
+              <TableCell>Паспорт</TableCell>
+              <TableCell>Дата поступления</TableCell>
+              <TableCell>Дата выписки</TableCell>
+              <TableCell>Действия</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -141,13 +144,13 @@ const PatientList: React.FC = () => {
         open={openDeleteDialog}
         onClose={() => setOpenDeleteDialog(false)}
       >
-        <DialogTitle>Confirm Delete</DialogTitle>
+        <DialogTitle>Подтвердите удаление</DialogTitle>
         <DialogContent>
-          Are you sure you want to delete this patient?
+          Вы уверены, что хотите удалить пациента?
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setOpenDeleteDialog(false)}>Cancel</Button>
-          <Button onClick={handleDeleteConfirm} color="error">Delete</Button>
+          <Button onClick={() => setOpenDeleteDialog(false)}>Назад</Button>
+          <Button onClick={handleDeleteConfirm} color="error">Удалить</Button>
         </DialogActions>
       </Dialog>
     </Box>

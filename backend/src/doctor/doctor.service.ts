@@ -15,11 +15,16 @@ export class DoctorService {
     private doctorRepository: Repository<Doctor>,
   ) {}
 
+
+
   async findAll(): Promise<Doctor[]> {
     return this.doctorRepository.find({
       relations: ['specialty', 'wards', 'appointments'],
     });
   }
+
+
+
 
   async findOne(id: number): Promise<Doctor> {
     const doctor = await this.doctorRepository.findOne({
@@ -32,12 +37,18 @@ export class DoctorService {
     return doctor;
   }
 
+
+
+
   async create(createDoctorDto: CreateDoctorDto): Promise<Doctor> {
     const doctor = this.doctorRepository.create(createDoctorDto);
     const savedDoctor = await this.doctorRepository.save(doctor);
     return this.findOne(savedDoctor.doctor_id);
   }
 
+
+
+  
   async update(id: number, updateDoctorDto: UpdateDoctorDto): Promise<Doctor> {
     await this.doctorRepository.update(id, updateDoctorDto);
     return this.findOne(id);
@@ -56,6 +67,10 @@ export class DoctorService {
         .execute();
     }
 
+
+
+
+
     // Удаляем связанные приемы (если нужно сохранить, можно закомментировать)
     if (doctor.appointments && doctor.appointments.length > 0) {
       await this.appointmentRepository
@@ -64,6 +79,9 @@ export class DoctorService {
         .where('doctor_id = :id', { id })
         .execute();
     }
+
+
+
 
     await this.doctorRepository.delete(id);
     return { message: `Doctor with ID ${id} successfully deleted` };
